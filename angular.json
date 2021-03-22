@@ -119,6 +119,50 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngx-sign-gen-demo"
+    },
+    "ngx-sign-gen": {
+      "projectType": "library",
+      "root": "projects/ngx-sign-gen",
+      "sourceRoot": "projects/ngx-sign-gen/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-sign-gen/tsconfig.lib.json",
+            "project": "projects/ngx-sign-gen/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-sign-gen/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-sign-gen/src/test.ts",
+            "tsConfig": "projects/ngx-sign-gen/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-sign-gen/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-sign-gen/tsconfig.lib.json",
+              "projects/ngx-sign-gen/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-sign-gen-demo",
+  "cli": {
+    "analytics": "fd11c1d9-90a4-4ef1-bd61-69f6375eaaf3"
+  }
 }
