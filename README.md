@@ -16,6 +16,7 @@ $ npm i ngx-sign-gen
 
 Import `NgxSignGenModule` into your `app.module.ts` file as follows:
 
+```
 // Other imports
 import { NgxSignGenModule } from 'ngx-sign-gen';
 
@@ -27,7 +28,7 @@ NgxSignGenModule
 providers: [],
 })
 export class AppModule { }
-
+```
 
 ## Available Options
 
@@ -43,6 +44,7 @@ You can use the options listed above as follows:
 
 In your component file `app.component.ts`:
 
+```
 export class AppComponent {
 // ...
 img: string = '';
@@ -65,7 +67,7 @@ getImage(data) {
 this.img = data;
 }
 }
-
+```
 
 In your html file `app.component.html`:
 
