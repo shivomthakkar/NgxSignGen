@@ -2,7 +2,7 @@
 
 This library is an Angular-based wrapper class for [text-signature](https://www.npmjs.com/package/text-signature).
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.9.
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.3.
 
 ## Installation
 
